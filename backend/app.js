@@ -1,11 +1,13 @@
 // API com Node.js, Express e MySQL
 
 const express = require('express');
+const cors = require('cors');
 const { pool, initDatabase } = require('./database');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Inicializar banco de dados
 initDatabase();
