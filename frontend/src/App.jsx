@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
   const [data, setData] = useState(null)
@@ -29,8 +26,8 @@ function App() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold text-blue-700">Devconnect</h1>
-      
+      <h1 className="text-4xl font-bold text-blue-700">SOCIAL.DEV</h1>
+
       {data && (
         <ul>
           {data.map((user) => (
@@ -40,7 +37,7 @@ function App() {
       )}
 
       <div className="flex flex-col items-center justify-center gap-4">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className="p-4 cursor-pointer bg-cyan-400 rounded-xl hover:bg-cyan-300" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
       </div>
