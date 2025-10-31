@@ -358,11 +358,7 @@ git stash pop
 ```bash
 # Quando há conflitos, resolva manualmente nos arquivos
 # Procure por marcadores como:
-<<<<<<< HEAD
-seu código
-=======
 código do outro
->>>>>>> branch-name
 
 # Após resolver:
 git add .
