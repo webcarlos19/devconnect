@@ -358,11 +358,7 @@ git stash pop
 ```bash
 # Quando há conflitos, resolva manualmente nos arquivos
 # Procure por marcadores como:
-<<<<<<< HEAD
-seu código
-=======
 código do outro
->>>>>>> branch-name
 
 # Após resolver:
 git add .
@@ -428,7 +424,7 @@ git checkout developing
 git pull origin developing
 git checkout feature/adicionar-dark-mode
 git merge developing
-git stash pop 
+git stash pop
 
 # 6. Resolver conflitos se houver
 # ... edite os arquivos conflitantes ...
