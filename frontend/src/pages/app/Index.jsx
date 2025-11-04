@@ -5,12 +5,14 @@ import Navbar from '../../components/App/Navbar/Navbar'
 function AppSocial() {
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen min-w-screen bg-[#0B0B0B]  ">
             {/* Navbar do App */}
-            <Navbar />
+            <Navbar /> 
+            
 
             {/* Conteúdo Principal */}
-            <main>
+            <main className="container mx-auto px-4 py-8">
+                
                 <Outlet />
             </main>
         </div>
