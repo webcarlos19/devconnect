@@ -1,31 +1,40 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
-  const [tela, setTela] = useState("inicio"); 
+  const [tela, setTela] = useState("inicio");
+
+  const navigate = useNavigate();
 
   const inputBase =
     "w-full mb-8 px-4 py-2 rounded-lg bg-transparent border border-white/30 text-white placeholder-white/60 focus:outline-none";
 
   const inputFocus = " focus:border-[#28E1ED] focus:ring-2 focus:ring-[#28E1ED]/30";
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Lógica de autenticação aqui
+    navigate("/app");
+  }
+
   return (
     <div className="text-left w-[350px]">
-   
+
       {tela === "inicio" && (
         <>
           <button
             onClick={() => setTela("login")}
-            className="w-full py-3 rounded-lg font-semibold text-black bg-[#28E1ED] hover:bg-[#1bd7dd] transition-shadow shadow-sm"
+            className="w-full cursor-pointer py-3 rounded-lg font-semibold text-black bg-[#28E1ED] hover:bg-[#1bd7dd] transition-shadow shadow-sm"
             style={{ boxShadow: "0 6px 20px rgba(40,225,237,0.12)" }}
           >
             Entrar agora
           </button>
 
-          <p className="text-sm text-white/70 text-center my-4">OU</p>
+          <p className="text-sm text-white/70 text-center my-4 md:my-8">OU</p>
 
           <button
             onClick={() => setTela("cadastro")}
-            className="w-full py-3 rounded-lg font-semibold text-white border border-white/40 hover:bg-white/10 transition"
+            className="w-full cursor-pointer py-3 rounded-lg font-semibold text-white border border-white/40 hover:bg-white/10 transition"
           >
             Cadastrar-se
           </button>
@@ -46,6 +55,7 @@ function LoginForm() {
           />
 
           <button
+            onClick={handleSubmit}
             className="w-full py-3 rounded-lg font-semibold text-black bg-[#28E1ED] hover:bg-[#1bd7dd] transition"
             style={{ boxShadow: "0 6px 20px rgba(40,225,237,0.12)" }}
           >

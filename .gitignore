@@ -1,0 +1,281 @@
+# ========================================
+# .gitignore para Projeto DevConnect
+# Backend: Node.js + Express + MySQL
+# Frontend: React + Vite + Tailwind CSS
+# ========================================
+
+# ============================
+# 📂 Dependencies / node_modules
+# ============================
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================
+# 🔐 Environment Variables
+# ============================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.production
+.env.staging
+
+# ============================
+# 🏗️ Build / Distribution
+# ============================
+# Frontend (Vite)
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Backend builds
+backend/dist/
+backend/build/
+
+# General build outputs
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# ============================
+# 📊 Coverage & Testing
+# ============================
+coverage/
+*.lcov
+.nyc_output/
+jest-results.json
+test-results/
+playwright-report/
+test-results.xml
+
+# ============================
+# 🗃️ Database
+# ============================
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Database dumps
+*.sql.dump
+*.sql.backup
+dump.sql
+
+# MySQL specific
+mysql-data/
+mysql-logs/
+
+# ============================
+# 🎯 IDE / Editor
+# ============================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================
+# 🖥️ Operating System
+# ============================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# ============================
+# 📝 Logs
+# ============================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime logs
+combined.log
+error.log
+access.log
+
+# ============================
+# 🔄 Runtime & Cache
+# ============================
+# Node.js
+.npm
+.node_repl_history
+
+# Yarn
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# pnpm
+.pnpm-debug.log*
+
+# ============================
+# 📱 Frontend Specific
+# ============================
+# Vite
+.vite/
+
+# Parcel
+.cache
+.parcel-cache
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt
+dist
+
+# Gatsby
+.cache/
+public
+
+# Storybook
+storybook-static
+
+# ============================
+# 🔧 Tool Configurations
+# ============================
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# TypeScript
+*.tsbuildinfo
+
+# Stylelint
+.stylelintcache
+
+# ============================
+# 🚀 Deployment
+# ============================
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Serverless
+.serverless/
+
+# Docker
+.docker/
+
+# ============================
+# 📊 Monitoring & Analytics
+# ============================
+# Sentry
+.sentry/
+
+# ============================
+# 💾 Backup & Temporary
+# ============================
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+
+# ============================
+# 🔍 Security & Certificates
+# ============================
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cert
+
+# SSH keys
+id_rsa
+id_rsa.pub
+
+# ============================
+# 📁 Project Specific
+# ============================
+# Uploads directory (if exists)
+uploads/
+public/uploads/
+
+# Generated documentation
+docs/generated/
+
+# Config overrides
+config.local.js
+config.local.json
+
+# Test files to ignore
+test-output/
+screenshots/
+
+# ============================
+# 🎨 Assets (Optional)
+# ============================
+# Large media files (uncomment if needed)
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.mp3
+# *.wav
+# *.flac
+
+# High-res images (uncomment if needed)
+# *.psd
+# *.ai
+# *.sketch
