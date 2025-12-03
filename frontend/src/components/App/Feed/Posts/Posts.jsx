@@ -1,29 +1,21 @@
 import PostCard from "../PostCard/PostCard";
+import posts from "../../../../data/posts";
 
 function Posts() {
     return (
         <div className="grid gap-4 relative z-20">
-            <h2 className="text-2xl font-semibold mb-4">Postagens</h2>
 
-            {/* Exemplo de postagens */}
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
+        {posts.map((post) => (
+          <PostCard
+            key={post.id}
+            fullName={post.fullName}
+            username={post.username}
+            date={post.date}
+            likes={post.likes}
+            content={post.content}
+          />
+        ))}
+
         </div>
     )
 }
