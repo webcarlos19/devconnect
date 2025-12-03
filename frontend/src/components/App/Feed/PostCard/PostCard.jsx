@@ -1,30 +1,34 @@
-export default function PostCard({ username, handle, text, date }) {
+import { User } from 'lucide-react';
+
+export default function PostCard({ fullName, username, content, date, likes }) {
   return (
     <div className="w-full max-w-2xl bg-[#0f0f0f] border border-[#1f1f1f] rounded-2xl p-6 flex flex-col gap-4 mx-auto">
       
       <div className="flex items-center gap-4">
     
-        <div className="w-12 h-12 rounded-full bg-gray-600" />
+        <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center">
+          <User className="w-6 h-6 text-gray-400" />
+        </div>
 
         <div className="flex flex-col">
           <span className="text-white font-semibold tracking-wide">
-            {username || "JENNIFERDEV"}
+            {fullName || "Nome"}
           </span>
           <span className="text-gray-400 text-sm">
-            @{handle || "Jennifer.dev"}
+            @{username || "username"}
           </span>
         </div>
       </div>
 
       <p className="text-gray-300 text-[15px] leading-relaxed">
-        {text || `"Carlos é bot..."`}
+        {content || `"Erro ao carregar o conteúdo do post. Por favor, tente novamente mais tarde."`}
       </p>
 
       <div className="flex justify-between items-center pt-2">
      
         <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition">
           <span className="text-gray-300 text-lg">♡</span>
-          <span className="text-gray-400 text-sm">1000</span>
+          <span className="text-gray-400 text-sm">{likes}</span>
         </div>
 
         <span className="text-gray-500 text-xs">
