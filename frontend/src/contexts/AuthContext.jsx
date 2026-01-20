@@ -36,6 +36,7 @@ export function AuthProvider({ children }) {
     const logout = () => {
         removeToken();
         setUser(null);
+        window.location.href = '/';
     };
 
     return (

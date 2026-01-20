@@ -11,6 +11,8 @@ function Posts() {
     getPosts()
       .then((data) => {
         setPosts(data);
+        setTimeout(() => {}, 1000);
+        console.log("TESTE")
       }).catch((error) => {
         console.error("Erro ao buscar posts:", error);
         setPosts([]);
